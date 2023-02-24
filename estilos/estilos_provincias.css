@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 50px;
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+header .logo{
+    position: absolute;
+    width: 6%;
+    top: 0.5%;
+    left: 50px;
+    text-decoration: none;
+    z-index: 1;
+}
+nav{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+nav ul{
+    transform: translateX(-17px);
+    position: relative;
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    color: rgb(127, 255, 148);
+    display: inline;
+    padding: 10px 15px;
+    font-size: 0.7cm;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+nav ul li a:hover{
+    color: blanchedalmond;
+}
+/*navegacion entre plantas y animales*/
+section{
+    padding-top: 20px;
+    margin-top: 70px;
+    background-image: url(../img/fondo_nature.jpg);
+}
+.container{
+    width: 100%;
+    max-width: 100vw;
+    margin: auto;
+}
+.lbl-menu{
+    display: flex;
+    justify-content: center;
+    background: lightsteelblue;
+}
+.lbl-menu label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.lbl-menu label:hover{
+    color: lightgreen;
+}
+.content{
+    position: relative;
+}
+#radio1,#radio2{
+    display: none;
+}
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+/*cabezera*/
+.titulo-provincia{
+
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(36, 65, 36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.titulo-provincia .img{
+    border-radius: 10px;
+    margin: 10px;
+    width: 30%;
+    height: 60vh;
+    overflow: hidden;
+}
+.titulo-provincia .img img{
+    width: 100%;
+}
+.titulo-provincia .text{
+    margin: 20px;
+    width: 40%;
+}
+.titulo-provincia .text p{
+    color: rgb(192, 189, 186);
+}
+/*info de animale sy plantas*/
+.content .informacion{
+    position: absolute;
+    width: 100%;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    background-image: url(../img/lluvia.jpg);
+    
+}
+.informacion h2{
+    padding: 20px;
+    color: rgb(0, 0, 0);text-decoration: overline;
+
+}
+.especies .card{
+    border: 1px solid #000;
+}
+.especies{
+    width: 98%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    gap: .5em;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+.especies .info1{
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.especies .info1 h4{
+    background: lightsteelblue;
+    width: 100%;
+    text-align: center;
+}
+.info1 img{
+    height: 200px;
+}
+.especies .info2{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background: lightsteelblue;
+    min-height: 300px;
+}
+.especies .info2 ul li{
+    list-style: none;
+}
+.emp{
+    text-align: justify;
+    padding: .5rem;
+    line-height: 1.2;
+    border-right: 1px solid #000;
+}
+.especies .info2 ul{
+    padding: .5rem;
+}
+/*footer */
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    color: white;
+}
+.copyright-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.copyright{
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 10px 0;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+.footer-container{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-content-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+footer .website-logo{
+    margin-bottom: 1.2rem;
+    font-size: calc(1vw + 20px);
+}
+.footer-info, .menu-item-footer{
+    margin: 0.2rem 0;
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu-item-footer:hover{
+    opacity: 1;
+}
+.menu-title{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+.social-link{
+    height: 100%;
+    width: 30px;
+    background-image: url();
+}

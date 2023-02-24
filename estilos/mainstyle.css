@@ -1,0 +1,410 @@
+@import url('https://fontd.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 700px;
+    margin: 0px 20px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,1);
+}
+header{
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 50px;
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    transition: 1s;
+}
+header.sticky{
+    height: 70px;
+}
+header .banner{
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+header.sticky .banner{
+    opacity: 0;
+}
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23%;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 1;
+}
+header.sticky .logo{
+    position: absolute;
+    width: 6%;
+    left: 50px;
+    transform: translate(0, -50%);
+}
+nav{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+}
+header.sticky nav ul{
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    color: rgb(127, 255, 148);
+    display: inline;
+    padding: 10px 15px;
+    font-size: 0.7cm;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color:bisque;
+}
+@media(max-width: 500px){
+    .bienvenida{
+        flex-wrap: wrap;
+    }
+    .bienvenida .condor{
+        margin-left: 34%;
+    }
+    .bienvenida .info-contenedor{
+        font-size: 15px;
+        padding: 30px;
+    }
+}
+@media(max-width: 900px){
+    .bienvenida{
+        flex-wrap: wrap;
+    }
+    .bienvenida .condor{
+        margin-left: 34%;
+    }
+    .bienvenida .info-contenedor{
+        font-size: 15px;
+        padding: 30px;
+    }
+}
+.inicio{
+    height: 115vh;
+    padding-top: 200px;
+    background-image: url(../img/ampay.jpg);
+    background-size: cover;
+}
+.condor{
+    box-shadow: 0px 18px 20px 5px #222;
+    border-radius: 0% 40% 0% 45%;
+    margin-left: 10%;
+    height: 50%;
+    width: 30%;
+}
+.bienvenida{
+    padding: 0;
+    text-align: justify;
+    display: flex;
+    font-size: 20px;
+}
+.info-contenedor{
+    padding: 4% 70px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.info-contenedor h1{
+    font-size: 45px;
+}
+.info-contenedor a{
+    border: 2px solid;
+    text-align: center;
+    color: whitesmoke;
+    background: #000000;
+    padding: 5px;
+    height: 45px;
+    width: 150px;
+    border-radius: 50px;
+    border-color: #000;
+    text-decoration: none;
+}
+.info-contenedor p{
+    border: 2px solid black;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(210, 255, 255);
+}
+.info-contenedor .btn:hover{
+    background: rgb(150, 237, 243);
+}
+.fyf{
+    background-image: url(../img/verde.jpg);
+    background-size: cover;
+}
+.prov{
+    padding: 0;
+    margin: 0;
+}
+.contenedor{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    height: 125vh;
+}
+.intro{
+    height: 400px;
+    width: 310px;
+    border: 2px solid white;
+    padding: 10px;
+}
+.intro .text1{
+    text-align: center;
+    color: #1dc72c;
+    padding: 30px;
+    background-image: linear-gradient(205deg, #009fd0 0, #1a7195 25%, #1f4459 50%, #141c22 75%, #000000 100%);
+    height: 380px;
+}
+.intro .text1 h4{
+    padding: 10px;
+    color: aquamarine;
+}
+.card{
+    height: 410px;
+    width: 310px;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-radius: 5%;
+    border: 1px solid #fff;
+    transition: all .4s ease-in-out;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    text-align: justify;
+    /*background: linear-gradient(-135deg, #c850c8, #4158d0);*/
+
+}
+.card:hover{
+    height: 410px;
+    width: 310px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+}
+.card-encabezado img{
+    position: relative;
+    border-radius: 5%;
+    display: block;
+    height: 300px;
+    width: 290px;
+    border-bottom: 4px solid #000000;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.card:hover .card-encabezado img{
+    height: 200px;
+    width: 290px;
+}
+.card-encabezado{
+    position: relative;
+}
+.desplazar{
+    opacity: 0;
+    transition: all .5s ease;
+    transform: translateY(-45px);
+}
+.card:hover .desplazar{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.agrandar{
+    transform: scale(0);
+    opacity: 0;
+    transition: all .4s ease;
+}
+.card:hover .agrandar{
+    opacity: 1;
+    transform: scale(1);
+}
+.info-personal{
+    color: #fff;
+}
+.info-personal:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 30px;
+    line-height: 15px;
+    text-align: center;
+    transition: all .5s ease;
+}
+.card:hover .info-personal:nth-child(1){
+    margin-top: 0;
+}
+.info-personal:nth-child(3){
+    margin: 8px 0;
+}
+.card-acciones{
+    text-align: center;
+}
+.botones{
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    padding: 8px 15px;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(205deg, #009fd0 0, #1a7195 25%, #1f4459 50%, #141c22 75%, #000000 100%);
+}
+.botones:hover{
+    cursor: pointer;
+    width: 100%;
+}
+.botones span{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1300px){
+    .contenedor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 900px){
+    .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.tema-bio{
+    width: 100%;
+    text-align: center;
+}
+.info{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+.info .h2{
+    padding: 25px;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(../img/ampay.jpg);
+    background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+}
+.intro-provincias{
+    background-color: #121212;
+    color:aliceblue;
+    padding: 10px;
+    height: 60px;
+}
+
+/*footer*/
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    color: white;
+}
+.copyright-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.copyright{
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 10px 0;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+.footer-container{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-content-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+footer .website-logo{
+    margin-bottom: 1.2rem;
+    font-size: calc(1vw + 20px);
+}
+.footer-info, .menu-item-footer{
+    margin: 0.2rem 0;
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu-item-footer:hover{
+    opacity: 1;
+}
+.menu-title{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+.social-link{
+    height: 100%;
+    width: 30px;
+    background-image: url();
+}
